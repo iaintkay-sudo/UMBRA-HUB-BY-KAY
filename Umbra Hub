@@ -1,0 +1,30 @@
+local StarterGui = game:GetService("StarterGui")
+local PlaceId = game.PlaceId
+
+local function notify(title, text)
+	StarterGui:SetCore("SendNotification", {
+		Title = title,
+		Text = text,
+		Duration = 5
+	})
+end
+
+-- SOUTHBOUND EXPERIENCE
+if PlaceId == 74075576100025 then
+
+	notify("Umbra Hub", "Loading Southbound Experience")
+
+	loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/c03f6d8a92e9f37f9ea86863b236c32fb68190c7212e0a35b4af8248500b5c1d/download"))()
+
+-- DANGEROUS ATV DRIVING
+elseif PlaceId == 134619004688066 then
+
+	notify("Umbra Hub", "Loading Dangerous ATV Driving")
+
+	loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/5d8d2a96a4470262e8008bc8593affd548c723eebe15d8e1c1c7d6098ded4806/download"))()
+
+-- NOT SUPPORTED
+else
+
+	notify("Umbra Hub", "This game is not supported")
+end
